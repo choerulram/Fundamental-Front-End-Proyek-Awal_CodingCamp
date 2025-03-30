@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App - Achmad Choerul Ramdahni</title>
+    <link rel="icon" href="./public/note_icon.ico" type="image/icon type">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="import" href="./script/components/templates.html">
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./script/components/note-card.js"></script>
+    <script type="module" src="./script/components/note-modal.js"></script>
+</head>
+<body>
+    <!-- start nav -->
+    <nav class="navbar">
+        <h1>Notes App</h1>
+    </nav>
+    <!-- end nav -->
+    
+    <!-- start main -->
+    <main>
+        <!-- start list note -->
+        <section class="notes_body">
+            <form id="searchNote">
+                <div class="search">
+                    <label class="label_search" for="searchNoteTitle">Judul : </label>
+                    <input id="searchNoteTitle" type="text" placeholder="Cari berdasarkan judul ..." />
+                    <button id="searchSubmit" class="search-button" type="submit">Cari</button>
+                    <button id="addNoteButton" class="btn add-note-button" type="button">Add Note</button>
+                </div>
+            </form>
+            <div id="notesList" class="list"></div>
+        </section>
+        <note-modal id="modal"></note-modal> 
+        <!-- end list note -->
+    </main>
+    <!-- end main -->
+
+    <!-- start foote -->
+    <footer>
+        <p>Created by <span><b>Achmad Choerul Ramdhani</b></span> in Program <span class="coding-camp"><b>Coding Camp Powered by DSS Foundation</b></span></p>
+    </footer>
+    <!-- end footer -->
+</body>
+</html>

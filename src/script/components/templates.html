@@ -1,0 +1,38 @@
+<!-- start template note card -->
+<template id="note-template">
+    <div class="note-card">
+        <h2></h2>
+        <p></p>
+        <small></small>
+        <p></p>
+        <div class="button-container">
+            <button class="edit-button">Edit Note</button>
+            <button class="delete-button">Delete Note</button>
+        </div>
+    </div>
+</template>
+<!-- end template note card -->
+
+<!-- start template modal -->
+<template id="modal-template">
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Note</h2>
+            <form id="noteForm">
+                <div class="input">
+                    <label>Judul</label>
+                    <input type="text" name="title" required placeholder="Tuliskan judul catatan ..." />
+                    <span id="titleFeedback" class="feedback"></span>
+                </div>
+                <div class="input">
+                    <label>Body</label>
+                    <textarea name="body" placeholder="Tuliskan isi catatan ..." required></textarea>
+                    <span id="bodyFeedback" class="feedback"></span>
+                </div>
+                <button class="submit_note" type="submit">Save Note</button>
+            </form>
+        </div>
+    </div>
+</template>
+<!-- end template modal -->

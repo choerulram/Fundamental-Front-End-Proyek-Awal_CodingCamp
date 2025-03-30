@@ -1,0 +1,369 @@
+/* import font dari google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* body style */
+body {
+  background-color: #e2eee6;
+  line-height: 1.6;
+}
+
+/* nav start */
+.navbar {
+  background: rgb(9, 202, 48);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar > h1 {
+  font-size: 30px;
+}
+/* end navbar */
+
+/* main style */
+main {
+  max-width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* h2 style */
+h2 {
+  width: 100%;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* start search note */
+.label_search {
+  font-weight: bold;
+  width: 95%;
+  margin: 25px 0 5px 30px;
+  font-size: 20px;
+}
+
+.search > input {
+  width: 40%;
+  height: 40px;
+  margin: 25px 0 5px 20px;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.search-button {
+  outline: none;
+  cursor: pointer;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  margin-right: 32%;
+  background-color: #007bff;
+  padding: 5px 15px;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+/* end seacrh note */
+
+/* start add note button */
+.add-note-button {
+  outline: none;
+  cursor: pointer;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  background-color: rgb(9, 202, 48);
+  padding: 5px 15px;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+}
+
+.add-note-button:hover {
+  background-color: #14aa26;
+}
+
+.reset-button {
+  outline: none;
+  cursor: pointer;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  background-color: #dc3545; /* Warna merah */
+  padding: 5px 15px;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+}
+
+.reset-button:hover {
+  background-color: #c82333; /* Warna merah gelap saat hover */
+}
+/* end add note button */
+
+/* start modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 8% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 54%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.input > label {
+  font-weight: bold;
+  display: block;
+  width: 95%;
+  margin: 5px auto;
+}
+
+.input > input {
+  display: block;
+  width: 95%;
+  height: 50px;
+  margin: 10px auto;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 15px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.input > textarea {
+  display: block;
+  width: 95%;
+  height: 150px;
+  margin: 10px auto;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 15px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.submit_note {
+  outline: none;
+  cursor: pointer;
+  /* width: 95%; */
+  margin: 15px 0 0 25px;
+  margin-bottom: 30px;
+  background-color: #0d6efd;
+  padding: 0px 20px;
+  border: 1px solid rgb(197, 194, 194);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+}
+
+.submit_note:hover {
+  background-color: #0b61e1;
+  color: white;
+}
+/* end modal style */
+
+/* start section */
+.notes_body {
+  padding: 20px;
+  margin: 20px 0 0 0;
+  border-radius: 20px;
+  border: 1px solid rgb(183, 214, 181);
+  background-color: white;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* start list note */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 1rem;
+}
+
+.note-card {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 15px;
+  margin: 0;
+  border-radius: 15px;
+  background-color: rgb(239, 248, 241);
+  border: 1px solid #afcbb7;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.note-card:hover {
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.note-card h2 {
+  grid-column: 1 / -1;
+}
+
+.note-card p {
+  grid-column: 1 / -1;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button {
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 15px;
+  height: 35px;
+  margin-top: 5px;
+  background-color: #ffc107;
+  border: 1px solid rgb(197, 194, 194);
+  border-radius: 10px;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #e8af06;
+  color: white;
+}
+
+.delete-button {
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 15px;
+  height: 35px;
+  margin-top: 5px;
+  background-color: #db2828;
+  border: 1px solid rgb(197, 194, 194);
+  border-radius: 10px;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  color: white;
+}
+/* end list note */
+
+/* start footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(9, 202, 48);
+  color: white;
+}
+
+.coding-camp {
+  color: rgb(52, 51, 51);
+}
+/* end footer */
+
+/* start media queries */
+@media (max-width: 768px) {
+  main {
+    max-width: 95%;
+  }
+
+  .search > input {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .submit_note {
+    width: 100%;
+  }
+
+  .note-card {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar > h1 {
+    font-size: 24px;
+  }
+
+  .search-button,
+  .add-note-button {
+    width: 100%;
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+  }
+
+  .note-card {
+    padding: 10px;
+  }
+}
+/* end media queries */
